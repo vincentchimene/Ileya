@@ -23,8 +23,7 @@ public class PerfectSquareTest{
     }
     
     
-    //javac -cp "junit-platform-console-standalone-1.11.0.jar:out" -d out PerfectSquareTest.java PerfectSquare.java
-    
+
     
 
 

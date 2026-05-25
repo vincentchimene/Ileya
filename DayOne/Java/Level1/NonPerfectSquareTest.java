@@ -23,8 +23,7 @@ public class NonPerfectSquareTest{
     }
     
     
-    //javac -cp "junit-platform-console-standalone-1.11.0.jar:out" -d out NonPerfectSquareTest.java NonPerfectSquare.java
-    
+
     
 
 
