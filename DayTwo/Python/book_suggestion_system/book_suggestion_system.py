@@ -20,7 +20,7 @@ def add_book(name, pages):
 def get_suggestions():
     suggested_book = random.choice(books)
     page = random.randint(1, suggested_book["pages"])
-    print(suggested_book["name"], "page", page)
+    print(f"\tBook for the Day:\t\nBook Title:\t{suggested_book["name"]}\nPage:\t\t{page}")
     return suggested_book["name"], page
     
 
@@ -47,7 +47,11 @@ def update_book(old_name, new_name):
 
 
 def show_books():
-    print(books)
+    count = 1
+    print(" All Books")
+    for book in books:
+        print(f"{count}. {book["name"]} {book["pages"]} pages")
+        count += 1
     
             
             
