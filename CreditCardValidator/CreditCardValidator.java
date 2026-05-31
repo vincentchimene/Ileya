@@ -24,10 +24,8 @@ public class CreditCardValidator{
 
     public static int getSumOfDigitsInOddIndices(int[] array){
         int sum = 0;
-        for(int index = 0; index < array.length; index++){
-            if(index % 2 != 0){
-                sum += array[index];
-            }
+        for(int index = array.length - 1; index >= 0; index -= 2){
+            sum += array[index];
         }
         return sum;
     }
@@ -39,14 +37,17 @@ public class CreditCardValidator{
     }
     
     
-    public static boolean isValid(int number){
-        if(number % 10 == 0){
-            return true;
+    public static String getCardValidity(int[] array, int number){
+        String validity = "";
+        if (array.length < 13 || array.length > 16) {
+        return "Invalid";
         }
-        else{
-            return false;
+        if (number % 10 == 0) {
+        return "Valid";
+        }    
+        else {
+        return "Invalid";
         }
-    
     }
     
     public static String checkCardType(int[] array){
@@ -64,19 +65,10 @@ public class CreditCardValidator{
             cardType = "American Express Card";
         }
         else{
-            cardType = "Invalid Card";
+            cardType = "Invalid Card Type";
         }
         return cardType;
    
     } 
-    
-    public static String checkDigitSize(int[] array){
-        if(array.length < 13){
-            return "Invalid Card";
-        }
-        else{
-            return "Valid Card";
-        }
-    }
 
 }
