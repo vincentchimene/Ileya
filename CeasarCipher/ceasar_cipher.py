@@ -4,14 +4,18 @@ def get_letter(word, shift, mode = "encript"):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     position = 0;
     new_word = ""
+    new_letter = ""
     for letter in word:
         if letter in alphabet:
             position = alphabet.index(letter)  
             new_position = (position + shift)%26
-        new_word += alphabet[new_position]
+            letter = alphabet[new_position]
+            
+        new_word += letter
     return new_word
 
 user_input = input("Enter your text")
 shift = int(input("Enter number for shift"))
 word = user_input.lower()
-print(get_letter(word,shift)
+print(get_letter(word,shift))
+
