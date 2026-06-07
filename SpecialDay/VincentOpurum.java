@@ -96,6 +96,7 @@ public class VincentOpurum {
         System.out.println(Arrays.deepToString(getScores()));
         System.out.println("Total Scores: " + Arrays.toString(getTotal(scores)));
         System.out.println("Average Scores: " + Arrays.toString(getAverage())); 
+        System.out.print("Average of Quizes:  ");
         System.out.println(Arrays.toString(getAveragesOfQuizes(scores)));
         getHighestAverageOfQuizes(averagesOfQuizes);
 
